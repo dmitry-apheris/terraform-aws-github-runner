@@ -17,5 +17,4 @@ module "vpc" {
   tags = {
     Environment = local.environment
   }
-
 }
