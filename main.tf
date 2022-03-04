@@ -70,7 +70,7 @@ module "webhook" {
 
   # labels
   enable_workflow_job_labels_check = var.runner_enable_workflow_job_labels_check
-  runner_labels                    = "self-hosted,${var.runner_os},${var.runner_architecture},${var.runner_extra_labels}"
+  runner_labels                    = "self-hosted,${var.runner_os},${var.runner_architecture}${var.runners_extra_labels != null ? ",${var.runners_extra_labels}": ""}"
 
   role_path                 = var.role_path
   role_permissions_boundary = var.role_permissions_boundary
